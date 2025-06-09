@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delicious Eats</title>
+    <link rel="stylesheet" href="web.css" />
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Logo" class="logo-img">
+                <h1 class="logo">Delicious Eats</h1>
+            </div>
+            <nav>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="hamburger">☰</label>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to Delicious Eats</h2>
+        <p>Where flavor meets comfort</p>
+    </section>
+
+    <!-- Image Gallery with CSS-only Slider -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="logo">Our Gallery</h2>
+            <div class="gallery-container">
+                <input type="radio" name="slider" id="item-1" checked>
+                <input type="radio" name="slider" id="item-2">
+                <input type="radio" name="slider" id="item-3">
+                <input type="radio" name="slider" id="item-4">
+                <input type="radio" name="slider" id="item-5">
+                <input type="radio" name="slider" id="item-6">
+
+                <div class="cards">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Fresh Pizza from our Oven" />
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Restaurant Interior" />
+                    <img src="https://images.unsplash.com/photo-1579684947550-22e945225d9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Wood-Fired Pizza" />
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Dining Area" />
+                    <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Specialty Pizza" />
+                    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Bar Area" />
+                </div>
+
+                <div class="dots">
+                    <label for="item-1"></label>
+                    <label for="item-2"></label>
+                    <label for="item-3"></label>
+                    <label for="item-4"></label>
+                    <label for="item-5"></label>
+                    <label for="item-6"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <p>Follow us:</p>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/groups/2814110952199575/">Facebook</a></li>
+                <li><a href="https://www.instagram.com/bknyeats/?hl=en">Instagram</a></li>
+            </ul>
+            <p>Business Hours: Mon-Sat 10am - 10pm</p>
+        </div>
+    </footer>
+</body>
+
+</html>

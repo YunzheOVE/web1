@@ -1,0 +1,479 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 1em 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* vertically centers logo text and image */
+  gap: 10px; /* spacing between image and text */
+}
+
+.logo-img {
+  height: 3em;
+  width: auto;
+}
+
+.logo {
+  font-size: 2em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://cdn.aarp.net/content/dam/aarpe/en/home/travel/vacation-ideas/food-drink/latin-american-food-cities/_jcr_content/root/container_main/container_moreAarp_main/container_moreAarp/container_moreAarp_cmp/featuredlist/tabItem/iconic-western-food2.coreimg.50.932.jpeg/content/dam/aarp/travel/Domestic/2018/07/1140-cioppino-eats-across-us.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 150px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* About */
+.about {
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+.about-content {
+    padding: 4em 0;
+    background: #fff;
+}
+
+.about-content h2 {
+    color: #333;
+    font-size: 2em;
+}
+
+.about-content p {
+    color: #555;
+    margin-bottom: 1.5em;
+    line-height: 1.8;
+    font-size: 1.1em;
+}
+
+/* Gallery */
+.gallery-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.cards {
+    display: flex;
+    width: 600%;
+    animation: slide 20s infinite;
+    transition: transform 0.5s ease-in-out;
+}
+
+.cards img {
+    width: 16.666%;
+    height: 500px;
+    object-fit: cover;
+    padding: 0 0 20px;
+}
+
+/* Pause on hover */
+.gallery-container:hover .cards {
+    animation-play-state: paused;
+}
+
+/* Slide keyframes */
+@keyframes slide {
+
+    0%,
+    15% {
+        transform: translateX(0);
+    }
+
+    20%,
+    35% {
+        transform: translateX(-16.666%);
+    }
+
+    40%,
+    55% {
+        transform: translateX(-33.333%);
+    }
+
+    60%,
+    75% {
+        transform: translateX(-50%);
+    }
+
+    80%,
+    95% {
+        transform: translateX(-66.666%);
+    }
+
+    100% {
+        transform: translateX(-83.333%);
+    }
+}
+
+/* Disable animation if manual radio is selected */
+input[type="radio"]:checked~.cards {
+    animation: none;
+}
+
+/* Manual control via radio buttons */
+#item-1:checked~.cards {
+    transform: translateX(0);
+}
+
+#item-2:checked~.cards {
+    transform: translateX(-16.666%);
+}
+
+#item-3:checked~.cards {
+    transform: translateX(-33.333%);
+}
+
+#item-4:checked~.cards {
+    transform: translateX(-50%);
+}
+
+#item-5:checked~.cards {
+    transform: translateX(-66.666%);
+}
+
+#item-6:checked~.cards {
+    transform: translateX(-83.333%);
+}
+
+/* Dots */
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    padding: 0 0 20px;
+}
+
+.dots label {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dots label:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+/* Active dot */
+#item-1:checked~.dots label:nth-child(1),
+#item-2:checked~.dots label:nth-child(2),
+#item-3:checked~.dots label:nth-child(3),
+#item-4:checked~.dots label:nth-child(4),
+#item-5:checked~.dots label:nth-child(5),
+#item-6:checked~.dots label:nth-child(6) {
+    background: #fff;
+    border-color: #fff;
+    transform: scale(1.4);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Menu Styles */
+.menu-section {
+    padding: 4em 0;
+    background: #f9f9f9;
+}
+
+.menu-title {
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: #333;
+    font-size: 2.5em;
+}
+
+.menu-category {
+    margin-bottom: 3em;
+}
+
+.menu-category h3 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    text-align: center;
+    position: relative;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    padding: 0 1em;
+}
+
+.menu-item {
+    background: white;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+}
+
+.menu-item h4 {
+    color: #333;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
+
+.menu-item .description {
+    color: #666;
+    margin-bottom: 2.5em;
+    font-size: 0.9em;
+}
+
+.menu-item .price {
+    color: #2c5282;
+    font-weight: bold;
+    font-size: 1.1em;
+    position: absolute;
+    bottom: 1.5em;
+    left: 1.5em;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 10px 0;
+}
+
+footer .social a {
+    color: rgba(74, 74, 250, 0.726)
+}
+
+/* Contact Page Styles */
+.contact-section {
+    padding: 4em 0;
+    background: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    margin-bottom: 3em;
+}
+
+.contact-form,
+.contact-info {
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background: #2c5282;
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #1a365d;
+}
+
+.contact-info h3 {
+    color: #333;
+}
+
+.info-item {
+    margin-bottom: 1.5em;
+}
+
+.info-item strong {
+    display: block;
+    color: #2c5282;
+    margin-bottom: 0.5em;
+}
+
+.info-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide checkbox */
+.nav-toggle {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        padding: 1em;
+        gap: 0.5em;
+        box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.5em;
+    }
+
+    .nav-links a:hover {
+        background: #444;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 1.5em;
+        cursor: pointer;
+        padding: 2em;
+    }
+
+    /* Show menu when checkbox is checked */
+    .nav-toggle:checked~.nav-links {
+        display: flex;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-item {
+        margin: 0 1em;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        margin-top: 2em;
+    }
+}
