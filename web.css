@@ -477,3 +477,7 @@ footer .social a {
         margin-top: 2em;
     }
 }
+
+.gallery-container input[type="radio"] {
+    display: none;
+}
