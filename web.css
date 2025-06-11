@@ -65,10 +65,16 @@ header {
 
 /* Hero Section */
 .hero {
-    background: url('https://cdn.aarp.net/content/dam/aarpe/en/home/travel/vacation-ideas/food-drink/latin-american-food-cities/_jcr_content/root/container_main/container_moreAarp_main/container_moreAarp/container_moreAarp_cmp/featuredlist/tabItem/iconic-western-food2.coreimg.50.932.jpeg/content/dam/aarp/travel/Domestic/2018/07/1140-cioppino-eats-across-us.jpg') center/cover no-repeat;
+    background: url('https://sherohomefood.in/wp-content/uploads/2021/05/SHF_home-slide-1.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
-    padding: 150px;
+    padding: 200px 10px;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 40px 5vw;
+    }
 }
 
 .hero h2 {
@@ -475,6 +481,12 @@ footer .social a {
 
     .map-container {
         margin-top: 2em;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 40px 5vw;
     }
 }
 
